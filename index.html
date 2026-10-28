@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Savor — Your order</title>
+  <meta name="description" content="A simple food picker. One click, one dish." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23e4572e'/%3E%3Ccircle cx='50' cy='50' r='18' fill='%23faf7f2'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Savor home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 3v7a2 2 0 0 0 4 0V3" />
+            <path d="M9 10v11" />
+            <path d="M17 3c-1.7 1.6-2.5 3.7-2.5 6.2 0 1.6.8 2.8 2.5 3.1V21" />
+          </svg>
+        </span>
+        <span class="brand-name">savor<span class="brand-dot">.</span></span>
+      </a>
+
+      <span class="nav-note">Your order</span>
+    </nav>
+  </header>
+
+  <main class="picker">
+    <p class="eyebrow">Tonight's pick</p>
+    <h1 class="title">What are we eating?</h1>
+    <p class="subtitle">One click. One dish. No decisions.</p>
+
+    <article class="food-card" id="foodCard" aria-live="polite" aria-atomic="true">
+      <div class="card-media">
+        <img id="foodImage" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=80" alt="A steaming bowl of ramen with mushrooms and greens" />
+      </div>
+
+      <div class="card-body">
+        <h2 class="card-title" id="foodName">Truffle Mushroom Ramen</h2>
+        <p class="card-desc" id="foodDesc">
+          Slow-simmered miso broth, springy noodles, woodland mushrooms and a
+          whisper of black truffle oil.
+        </p>
+
+        <div class="card-footer">
+          <span class="price" id="foodPrice">$16.50</span>
+          <span class="price-note">per serving</span>
+        </div>
+      </div>
+    </article>
+
+    <button class="pick-btn" id="randomBtn" type="button">
+      <span class="pick-btn-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 3h5v5" />
+          <path d="M4 20 21 3" />
+          <path d="M21 16v5h-5" />
+          <path d="m15 15 6 6" />
+          <path d="M4 4l5 5" />
+        </svg>
+      </span>
+      Pick another dish
+    </button>
+
+    <p class="hint">or press <kbd>R</kbd></p>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Savor</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
